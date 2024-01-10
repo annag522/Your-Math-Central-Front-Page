@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Theme Made By www.w3schools.com -->
+ <title>Your Math Central</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+body {
+  font-family: 'Roboto', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size:17px;
+   line-height: 1.7;
+   color: #000000;
+   background-color:white;
+ }
+
+ p {
+  font-family: 'Roboto', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size:18px;
+ }
+
+ h1 {
+  margin-top: -1vh;
+   font-weight:600;
+   color:black;
+ }
+
+
+ h2 {
+  font-family: 'Roboto', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 24px;
+   text-transform: uppercase;
+   color: #333333;
+   font-weight: 600;
+   margin-bottom: 30px;
+ }
+
+
+ h4 {
+   font-family: 'Roboto', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 19px;
+   line-height: 1.375em;
+   color: #303030;
+   font-weight: 600;
+   margin-bottom: 25px;
+ } 
+ .jumbotron {
+   background-image: url('Image22.svg');
+   background-color:white;
+   width: 97.5vw;
+   margin-top:2vh;
+   padding: 140px 120px 0px 350px;
+   height:94vh;
+   font-family: 'Roboto', sans-serif;
+   font-family: 'Source Sans Pro', sans-serif;
+ }
+
+
+ @media only screen and (max-width: 1330px) {
+
+
+h1 {
+     margin-top:-1.8vh;
+   }
+
+
+ .learn-more {
+   margin-top:-1.8vh;
+   
+ }
+}
+  @media only screen and (max-width: 1100px) {
+ .jumbotron {
+  background-image:none;
+ }
+}
+
+.learn-more {
+ font-size:18px;
+ background-color: rgb(48, 122, 234);
+ color:white;
+ /*#f1ca7b;*/
+ border:none;
+ border-radius:15px;
+ padding: 10px 20px 10px 20px;
+ box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.learn-more:hover {
+ background-color: rgba(48, 122, 234, 0.678);
+ color:white;
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+ .jumbotron {
+   padding: 150px 130px 0px 130px;
+   height:75vh;
+ }
+}
+
+
+@media only screen and (max-width:800px) {
+ .jumbotron {
+   padding: 175px 80px 0px 80px;
+   height:80vh;
+ }
+}
+
+
+@media only screen and (max-width:800px) {
+ .jumbotron {
+   height:80vh;
+ }
+ h1 {
+     font-size:4em;
+ }
+
+
+}
+
+
+@media only screen and (max-width:600px) {
+ .jumbotron {
+   height:90vh;
+  }
+
+ h1 {
+     font-size:2.6em;
+ }
+}
+
+
+  .container-fluid {
+    padding: 60px 50px;
+
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 17px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    background-color:rgb(255, 255, 255);
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: rgb(0, 0, 0) !important;
+    font-weight:600;
+    font-size:16px;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #1e42f4 !important;
+    background-color: rgb(255, 255, 255) !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1e42f4;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#Home" style = "font-size:20px; font-weight:600;">Your Math Central</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style = "font-size:15px; font-weight:600;" href="#about">ABOUT</a></li>
+        <li><a style = "font-size:15px; font-weight:600;" href="#services">FORMULAS</a></li>
+        <li><a style = "font-size:15px; font-weight:600;" href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1 style = "color:#262626;">Your <span class = "onthego">on-the-go</span><br> reference sheet</h1> 
+  <p style = "color:#303030; font-weight:200;">to provide quick and easy access for you to <span class = "blueya"><b>study</b></span>,<span class = "blueya"><b> review</b></span>, and <span class = "blueya"><b>learn</b><br></span> mathematical formulas whenever, wherever.</p> 
+  <button style = "font-weight:600;"class = "btn learn-more">Learn More</button>
+</div>
+
+<style>
+  .onthego {
+    color:rgb(33, 113, 234);
+  }
+
+  .blueya {
+    color:rgb(33, 113, 234);
+  }
+</style>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid" style = "background-image: linear-gradient(white,rgba(33, 113, 234, 0.117))">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2></h2><br> <!--insert text here-->
+     
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center"  style = "background-color:rgba(33, 113, 234, 0.111)">
+  <h2 style = "font-size:35px;">Ready to learn?</h2>
+  <button style = "font-weight:600; margin-left:-2vh;"class = "btn learn-more">Explore Formulas</button>
+  </div>
+ 
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center" style = "background-color:rgba(33, 113, 234, 0.112)">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Algebra 1</h4>
+      <p><a href = "midpointformula.html">Midpoint</a><br>
+        <a href = "distanceformula.html">Distance</a><br>
+        <a href = "quadraticformula.html">Quadratic Formula</a>
+        <br><a href = "slopeformula.html">Slope Formula</a><br>
+        <a href = "meanformula.html">Mean & Median Formula</a></p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Geometry</h4>
+      <p><a href = "pythagoreantheorem.html">Pythagorean's Theorem</a><br>
+         <a href = "SOH.html">Intro to Trigonometry (SOH-CAH-TOA)</a><br>
+         <a href = "SOH.html">Special Right Triangles</a><br>
+         <a href = "SOH.html">Inverse Trigonometry</a><br>
+         <a href = "areaofcircle.html">Area of a circle</a><br>
+         <a href = "arclength.html">Arc length of circle</a><br>
+         <a href = "SOH.html">Arc sector of circle</a><br>
+         <a href = "SOH.html">Interior & Exterior angles</a><br>
+         <a href = "SOH.html">Volume of cube, cone, and cylinder</a><br>
+        </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Algebra 2</h4>
+      <p>
+        <a href = "pythagoreantheorem.html">Unit Circle</a><br>
+        <a href = "pythagoreantheorem.html">Recursive sequences</a><br>
+        <a href = "pythagoreantheorem.html">Explicit sequences</a><br>
+        <a href = "pythagoreantheorem.html">Arithmetic sequences</a><br>
+        <a href = "pythagoreantheorem.html">Geometric sequences</a><br>
+        <a href = "pythagoreantheorem.html">Exponential Growth/Decay</a><br>
+
+         
+        </p>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Pre-Calculus</h4>
+      <p>
+        <a href = "pythagoreantheorem.html">Pythagorean's Theorem</a><br>
+         <a href = "SOH.html">Intro to Trigonometry SOH-CAH-TOA)</a><br>
+         <a href = "SOH.html">Inverse Trigonometry</a><br>
+         <a href = "SOH.html"></a><br>
+        </p>
+      </p>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+    <!-- Left and right controls -->
+    
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+
+
+
